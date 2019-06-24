@@ -1,0 +1,64 @@
+<!doctype html>
+<html ng-app="habitApp">
+ <head>
+    <link rel="stylesheet" href="index.css">
+  <script   src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.min.js"></script>
+  
+<script src="index.js"></script>
+ </head>
+ <body>
+  <div ng-controller="indexCtrl as app">
+    <form autocomplete='off' class='form'>
+      <div class='control'>
+        <h1>
+          Sign In
+        </h1>
+      </div>
+      <div class='control block-cube block-input'>
+        <input name='username' placeholder='Username' type='text'>
+        <div class='bg-top'>
+          <div class='bg-inner'></div>
+        </div>
+        <div class='bg-right'>
+          <div class='bg-inner'></div>
+        </div>
+        <div class='bg'>
+          <div class='bg-inner'></div>
+        </div>
+      </div>
+      <div class='control block-cube block-input'>
+        <input name='password' placeholder='Password' type='password'>
+        <div class='bg-top'>
+          <div class='bg-inner'></div>
+        </div>
+        <div class='bg-right'>
+          <div class='bg-inner'></div>
+        </div>
+        <div class='bg'>
+          <div class='bg-inner'></div>
+        </div>
+      </div>
+      <button class='btn block-cube block-cube-hover' type='button'>
+        <div class='bg-top'>
+          <div class='bg-inner'></div>
+        </div>
+        <div class='bg-right'>
+          <div class='bg-inner'></div>
+        </div>
+        <div class='bg'>
+          <div class='bg-inner'></div>
+        </div>
+        <div class='text'>
+          Log In
+        </div>
+      </button>
+      <div class='credits'>
+        <a href='https://codepen.io/marko-zub/' target='_blank'>
+          My other codepens
+        </a>
+      </div>
+    </form>
+    
+  </div>
+ </body>
+</html>
