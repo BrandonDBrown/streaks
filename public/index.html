@@ -8,14 +8,14 @@
  </head>
  <body>
   <div ng-controller="indexCtrl as app">
-    <form autocomplete='off' class='form'>
+    <form ng-submit="enterMinion()" autocomplete='off' class='form'>
       <div class='control'>
         <h1>
-          Sign In
+          Streaks
         </h1>
       </div>
       <div class='control block-cube block-input'>
-        <input name='username' placeholder='Username' type='text'>
+        <input name='username' ng-model="moniker" placeholder='Moniker' type='text'>
         <div class='bg-top'>
           <div class='bg-inner'></div>
         </div>
@@ -26,19 +26,7 @@
           <div class='bg-inner'></div>
         </div>
       </div>
-      <div class='control block-cube block-input'>
-        <input name='password' placeholder='Password' type='password'>
-        <div class='bg-top'>
-          <div class='bg-inner'></div>
-        </div>
-        <div class='bg-right'>
-          <div class='bg-inner'></div>
-        </div>
-        <div class='bg'>
-          <div class='bg-inner'></div>
-        </div>
-      </div>
-      <button class='btn block-cube block-cube-hover' type='button'>
+      <button class='btn block-cube block-cube-hover' type="submit">
         <div class='bg-top'>
           <div class='bg-inner'></div>
         </div>
@@ -49,16 +37,15 @@
           <div class='bg-inner'></div>
         </div>
         <div class='text'>
-          Log In
+          Start 
         </div>
       </button>
+    </form>
       <div class='credits'>
         <a href='https://codepen.io/marko-zub/' target='_blank'>
-          My other codepens
+          Attribution
         </a>
       </div>
-    </form>
-    
   </div>
  </body>
 </html>

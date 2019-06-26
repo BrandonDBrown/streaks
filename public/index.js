@@ -1,10 +1,13 @@
 // index.js
 angular.module('habitApp', [])
-  .controller('indexCtrl', function($scope) {
-   // Initialize variables
-   $scope.name1 = '';
-   this.name2 = '';
-   $scope.greeting1 = `Hello ${$scope.name1}`;
-   this.greeting2 = `Hi ${this.name2}`;
-
-  })
+  .controller('indexCtrl', ['$scope', '$http', '$location', function($scope, $http, $location) {
+   // Initialize variables 
+   $scope.enterMinion = function() {
+    $http.post('/api/accounts', { "username" : $scope.moniker }).then(function(response) {
+      console.log(response.data[0]._id)
+      $location.path('/api/account/' +response.data[0]._id);
+    }, function(response) {
+      console.log(response)
+    });
+  }
+}])
